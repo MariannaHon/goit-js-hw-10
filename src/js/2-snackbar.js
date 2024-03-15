@@ -12,20 +12,22 @@ form.addEventListener('submit', e => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (option === "fulfilled") {
-        resolve(displayToastGood(`✅ Fulfilled promise in ${delay}ms`));
+        resolve();
+        console.log(`✅ Fulfilled promise in ${delay}ms`);
       }
       else {
-        reject(displayToast(`❌ Rejected promise in ${delay}ms`));
+        reject();
+        console.log(`❌ Rejected promise in ${delay}ms`);
       }
     }, delay);
   });
 
   promise
-    .then(() => {
-      console.log('`✅ Fulfilled promise in ${delay}ms`')
+    .then(ok => {
+      displayToastGood(`✅ Fulfilled promise in ${delay}ms`);
     })
-    .catch(() => {
-      console.log('`❌ Rejected promise in ${delay}ms`')
+    .catch(error => {
+      displayToast(`❌ Rejected promise in ${delay}ms`);
     });
 });
 

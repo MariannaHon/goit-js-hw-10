@@ -84,13 +84,52 @@ img {
   width: 75px;
   height: 40px;
   border: none;
-  background: #cfcfcf;
+  background: #4e75ff;
+  cursor: pointer;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  color: #fff;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background: #6C8CFF;
+}
+
+.static {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  border: none;
+  background: #4e75ff;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.disabled {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  border: none;
+  background: #cfcfcf;
+  cursor: pointer;
+
   color: #989898;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .timer {

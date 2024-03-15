@@ -21,6 +21,13 @@ const options = {
       start.disabled = false;
       input.disabled = true;
     }
+
+    if (start.disabled === true) {
+      start.classList.toggle('btn');
+    }
+    else if (start.disabled === false) {
+      start.classList.toggle('disabled');
+    }
   },
 };
 
