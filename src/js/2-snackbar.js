@@ -12,11 +12,11 @@ form.addEventListener('submit', e => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (option === "fulfilled") {
-        resolve();
+        resolve(delay);
         console.log(`✅ Fulfilled promise in ${delay}ms`);
       }
       else {
-        reject();
+        reject(delay);
         console.log(`❌ Rejected promise in ${delay}ms`);
       }
     }, delay);
